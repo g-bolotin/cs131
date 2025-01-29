@@ -19,11 +19,34 @@ Q3. UID: 1001 (galit_bolotin)
             1001(google-sudoers)
     Command: id
 
+    
+    Command Results:
+    
+    uid=1001(galit_bolotin) gid=1002(galit_bolotin) groups=1002(galit_bolotin),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),118(netdev),119(lxd),1000(ubuntu),1001(google-sudoers)
+
 ----------------------------------------------------------------------------
 
 Q4. Info about memory: /proc/meminfo
     Info about cpu: /proc/cpuinfo
     Command: ls /proc
+
+
+    Command Results:
+
+1     116  18   3    480  693  88   99          dynamic_debug  kpagecgroup   pressure       uptime
+10    119  19   30   482  699  90   acpi        execdomains    kpagecount    schedstat      version
+100   12   2    31   493  714  92   bootconfig  fb             kpageflags    scsi           version_signature
+101   120  20   32   495  725  93   buddyinfo   filesystems    loadavg       self           vmallocinfo
+102   127  206  321  496  729  942  bus         fs             locks         slabinfo       vmstat
+104   128  21   322  5    8    95   cgroups     interrupts     mdstat        softirqs       zoneinfo
+1059  129  22   323  501  80   950  cmdline     iomem          meminfo       stat
+106   13   222  324  512  81   953  consoles    ioports        misc          swaps
+1060  130  24   325  579  82   956  cpuinfo     irq            modules       sys
+107   131  25   33   6    83   957  crypto      kallsyms       mounts        sysrq-trigger
+1078  14   26   34   663  84   958  devices     kcore          mtrr          sysvipc
+1097  15   27   4    677  85   96   diskstats   key-users      net           thread-self
+11    16   274  444  683  86   97   dma         keys           pagetypeinfo  timer_list
+1103  170  29   447  684  87   98   driver      kmsg           partitions    tty
 
 ----------------------------------------------------------------------------
 
@@ -113,3 +136,19 @@ Q6. Processors: 2
 Q7. OS Version: Ubuntu 20.04.6 LTS (Focal Fossa)
     Stored in: /etc/os-release
     Commands: ls /etc, cat /etc/os-release
+
+
+    Command "cat /etc/os-release" Results:
+    
+    NAME="Ubuntu"
+    VERSION="20.04.6 LTS (Focal Fossa)"
+    ID=ubuntu
+    ID_LIKE=debian
+    PRETTY_NAME="Ubuntu 20.04.6 LTS"
+    VERSION_ID="20.04"
+    HOME_URL="https://www.ubuntu.com/"
+    SUPPORT_URL="https://help.ubuntu.com/"
+    BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+    PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+    VERSION_CODENAME=focal
+    UBUNTU_CODENAME=focal
