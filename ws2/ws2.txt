@@ -1,0 +1,34 @@
+Q2. Home dir path: /home/galit_bolotin/cs131
+    Command: pwd
+
+Q3. UID: 1001 (galit_bolotin)
+    Groups: 1002(galit_bolotin)
+            4(adm)
+            20(dialout)
+            24(cdrom)
+            25(floppy)
+            29(audio)
+            30(dip)
+            44(video)
+            46(plugdev)
+            118(netdev)
+            119(lxd)
+            1000(ubuntu)
+            1001(google-sudoers)
+    Command: id
+
+Q4. Info about memory: /proc/meminfo
+    Info about cpu: /proc/cpuinfo
+    Command: ls /proc
+
+Q5. Total memory: 976900kb (0.9769gb)
+    Command: head /proc/meminfo
+
+Q6. Processors: 2
+    Architecture: Intel Xeon
+    Processor speed: 2.20 GHz
+    Commands: head /proc/cpuinfo, cat /proc/cpuinfo, tail /proc/cpuinfo
+
+Q7. OS Version: Ubuntu 20.04.6 LTS (Focal Fossa)
+    Stored in: /etc/os-release
+    Commands: ls /etc, cat /etc/os-release
