@@ -3,13 +3,15 @@
    47  pwd
    48  id
    50  cd ~
-   53  ls /proc
+
    55  head /proc/meminfo
    56  head /proc/cpuinfo
    57  cat /proc/cpuinfo
    58  tail /proc/cpuinfo
+   59  ls /proc
    60  ls /etc
    62  cat /etc/os-release
+
    63  cd cs131
    68  echo "Q2. Command used: pwd, Home dir path: /home/galit_bolotin/cs131" > ws2.txt
    69  vim ws2.txt
@@ -17,4 +19,20 @@
    76  git status
    77  git commit -m "created ws2 responses"
    78  git push origin main
+
    79  history > cmds.log
+   81  vim cmds.log
+   83  mv cmds.log ws2
+   84  cd ws2
+
+   86  vim ws2.txt
+   97  git status
+   98  git add ws2.txt
+   99  git add cmds.log
+  100  git commit -m "completed ws2.txt questions & added cmds.log"
+ 
+  114  vim ws2.txt
+  116  git add ws2.txt
+  117  git commit -m "updated ws2.txt to contain Q1 commands"
+  118  git push origin main
+  119  history > cmds.log
