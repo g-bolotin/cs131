@@ -1,0 +1,66 @@
+[Task 1]
+	Sort the pickup location IDs in order to find the most popular pickup locations on January 2nd, 2019.
+	Identify the top 3 locations.
+
+	Steps:
+
+	1. Filter out anything not from Jan 2nd, 2019.
+	2. Sort by pickup location ID (pulocationid).
+	3. Count how many references to unique location IDs there are.
+
+
+	Commands:
+
+	1. cut -d, -f2- 2019-01-h1.csv > no_vendorid.csv
+
+		cut 					Command for removing data by pattern.
+		
+		-d,					Delimiter option (comma for comma-separated data).
+		
+		-f2-					Select fields starting from column 2 (pickup date/time).
+							We don't care about column 1, makes it easier to pattern match. 
+		
+		2019-01-h1.csv > no_vendorid.csv	Input file is the original dataset, write results to new file.
+
+
+	2. grep '^"2019-01-02 ' no_vendorid.csv | sort -t, -k7,7g > sorted_jan2.csv
+
+		grep					Command for pattern matching.
+
+		'^"2019-01-02 '				Pattern for lines starting with '"2019-01-02 '.
+
+		sort					Command for sorting lines of data.
+
+		-t,					Field separator option (comma).
+
+		-k7,7g					Column 7 of no_vendorid.csv (pickup location ID) is the key to sort							   by, sorted numerically (-g).
+
+
+	3. cut -d, -f7 sorted_jan2.csv | uniq -c | sort -t, -gr | head -3
+		 
+		-f7		For sorting, we only care about the pickup ID column (7).	
+	
+		uniq -c		Get the unique pickup location IDs and the number of times they appear in the dataset.
+		
+		sort -gr	Sort the IDs by numeric count, highest to lowest.
+		
+		head -3		Print only the top 3 most-referenced IDs.
+
+
+	Final Result: The top 3 locations are 161.0, 132.0, and 186.0, with 8555, 8145, and 8122 pickups respectively.
+
+		8555 161.0
+		8145 132.0
+		8122 186.0
+
+[Task 2]
+	Sort the pickup location IDs in order to find the most popular pickup locations on January 10th, 2019.
+	
+	Steps:
+	Essentially do the same thing as task 1, but with a different date.
+
+	Commands:
+ 
+	1. grep '^"2019-01-10 ' no_vendorid.csv | sort -t, -k7,7g > sorted_jan10.csv
+
+	2. cut -d, -f7 sorted_jan10.csv | uniq -c | sort -t, -gr | head -3
