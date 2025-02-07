@@ -57,10 +57,17 @@
 	Sort the pickup location IDs in order to find the most popular pickup locations on January 10th, 2019.
 	
 	Steps:
-	Essentially do the same thing as task 1, but with a different date.
+	Essentially do the same thing as Task 1, but with a different date. Slightly different commands here since I
+	made a new datasets directory and reused the no_vendorid.csv file from Task 1.
 
 	Commands:
  
-	1. grep '^"2019-01-10 ' no_vendorid.csv | sort -t, -k7,7g > sorted_jan10.csv
+	1. grep '^"2019-01-10 ' ~/cs131/datasets/ws3/no_vendorid.csv | sort -t, -k7,7g > sorted_jan10.csv
 
 	2. cut -d, -f7 sorted_jan10.csv | uniq -c | sort -t, -gr | head -3
+	
+	Final Result: The top 3 locations are 237.0, 136.0, and 161.0, with 13693, 13486, and 12922 pickups respectively.
+		
+		13693 237.0
+		13486 236.0
+		12922 161.0

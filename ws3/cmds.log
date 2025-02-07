@@ -1,0 +1,34 @@
+  246  sudo apt install python3-pip
+  247  pip install gdown
+  249  /home/galit_bolotin/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  251  mv 2019-01-h1.csv cs131
+  252  cd cs131
+  342  vim ws3.txt
+  345  grep '^"2019-01-02 ' 2019-01-h1.csv | sort -t, -k8,8g > sorted_jan2.csv
+  346  head sorted_jan2.csv
+  350  cut -d, -f2- 2019-01-h1.csv > no_vendorid.csv
+  369  grep '^"2019-01-02 ' no_vendorid.csv | sort -t, -k7,7g > sorted_jan2.csv
+  370  cut -d, -f7 sorted_jan2.csv | uniq -c | sort -t, -gr | head -3
+  371  vim ws3.txt
+  384  mkdir datasets
+  385  cd ws3
+  387  cd datasets
+  388  mkdir ws3
+  389  cd ..
+  390  cd ws3
+  391  mv 2019-01-h1.csv ~/cs131/datasets/ws3
+  393  mv no_vendorid.csv ~/cs131/datasets/ws3
+  394  mv sorted_jan2.csv ~/cs131/datasets/ws3
+  395  mv sorted_puid.csv ~/cs131/datasets/ws3
+  397  mv filtered_data.csv ~/cs131/datasets/ws3
+  399  cd ..
+  404  git add ws3
+  405  git commit -m "created ws3, completed task 1"
+  406  git push origin main
+  418  grep '^"2019-01-10 ' ~/cs131/datasets/ws3/no_vendorid.csv | sort -t, -k7,7g > sorted_jan10.csv
+  419  cut -d, -f7 sorted_jan10.csv | uniq -c | sort -t, -gr | head -3
+  434  head sorted_jan10.csv
+  435  cut -d, -f7 sorted_jan10.csv | uniq -c | sort -t, -gr | head -3
+  436  vim ws3.txt
+  437  cd cs131/ws3
+  438  history > cmds.log
