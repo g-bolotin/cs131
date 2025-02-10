@@ -4,4 +4,3 @@ newline
 
 another line
 a change on main
-newline
