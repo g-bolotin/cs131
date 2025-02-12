@@ -1,0 +1,69 @@
+[Task 1]
+	Alias results (when under home directory):
+	l: 
+		total 4
+		drwxrwxr-x 7 galit_bolotin galit_bolotin 4096 Feb 10 19:13 cs131
+	w:
+      		2      11      73
+
+[Task 2]
+	2a.) Chosen pairs: 48.0-161.0 and 193.0-193.0
+	2b.) Corresponding files in FARE: 48.0-161.0.txt and 193.0-193.0.txt
+	2c.) Commands:
+		sum=$(paste -sd+ 48.0-161.0.txt | bc)		Create variable 'sum' that contains all numbers
+								in the txt file separated by '+'. Uses -s to
+								put all number pairs into 1 line instead of a
+								newline for each (ex. 1+1+2+2 instead of
+								1+1 newline 2+2). This allows us to use bc.
+
+		count=$(wc -l < 48.0-161.0.txt)			Create variable 'count' that contains the total
+								number of lines in the given file. Must use <
+								to avoid a syntax error.
+ 
+		echo "scale=10; $sum / $count" | bc		Print the average to 10 decimal points.
+
+
+
+	     	Use these commands with the appropriate file name for different average fares.
+
+		Results: 
+		Average for 48.0-161.0.txt: 7.0779231266
+		Average for 193.0-193.0.txt: 3.0559359067
+
+	2d). Uses the sorted_jan10.csv file that contains all entries from January 10th, 2019 from Task 2
+	     in WS3.
+	
+	     Commands: 
+		cut -d, -f10 ~/cs131/datasets/ws3/sorted_jan10.csv | sort -t, -gr | head -1
+
+		Takes the 10th column (corresponding to fare) and sorts it in descending order. Prints the top
+		value.
+
+		Results: 36090.3
+
+	2e.) Commands:
+		cut -d, -f4,9 ~/cs131/datasets/2019-01-h1.csv > cust-do.csv	Cut out all columns except the
+										customer count and dropoff ID.
+
+		awk -F, '$1 >= 3.0' cust-do.csv > gt3.csv			With field separator of comma,
+										filter column 1 (customer count)
+										by values greater than or equal
+										to 3. awk was nicer than trying
+										to use grep and other stuff 
+										we've explicitly covered.
+
+		cut -d, -f2 gt3.csv | sort -g | uniq -c | sort -gr | head	Looking only at dropoff ID column,
+										sort by ID to ensure uniq will see
+										all duplicates. Then count unique
+										locations and sort by highest to 
+										lowest. Retrieve the top 10 values.
+
+		Results: Left - Count, Right - dropoff location ID
+
+		19897 236.0
+		18013 161.0
+		16686 237.0
+		16556 230.0
+		14324 170.0
+		13964 48.0
+		13902 162.0
