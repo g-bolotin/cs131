@@ -45,12 +45,16 @@
 		cut -d, -f4,9 ~/cs131/datasets/2019-01-h1.csv > cust-do.csv	Cut out all columns except the
 										customer count and dropoff ID.
 
-		awk -F, '$1 >= 3.0' cust-do.csv > gt3.csv			With field separator of comma,
-										filter column 1 (customer count)
-										by values greater than or equal
-										to 3. awk was nicer than trying
-										to use grep and other stuff 
-										we've explicitly covered.
+		grep -E '^([3-9]\.|[1-9][0-9]+\.)' cust-do.csv > gt3.csv	Filter for "greater than or equal
+										to 3" by checking if the line starts
+										with 3 or higher followed by a
+										decimal point, or if the line starts
+										with at least two digits (the first
+										being >0) followed by a decimal.
+										-E is used to allow extended regex
+										so we don't have to escape
+										parenthesis (better readability).
+
 
 		cut -d, -f2 gt3.csv | sort -g | uniq -c | sort -gr | head	Looking only at dropoff ID column,
 										sort by ID to ensure uniq will see

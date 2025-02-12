@@ -14,7 +14,7 @@
   498  cut -d, -f10 ~/cs131/datasets/ws3/sorted_jan10.csv | sort -t, -gr | head -3
   539  cut -d, -f4,9 ~/cs131/datasets/2019-01-h1.csv > cust-do.csv
   540  head cust-do.csv
-  550  awk -F, '$1 >= 3.0' cust-do.csv > gt3.csv
+  550  grep -E '^([3-9]\.|[1-9][0-9]+\.)' cust-do.csv > gt3.csv 
   551  head gt3.csv
   562  cut -d, -f2 gt3.csv | sort -g | uniq -c | sort -gr | head
   568  history > cmds.log
