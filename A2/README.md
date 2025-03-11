@@ -53,42 +53,42 @@ For example: "timeme 5s 3s" will work the same as "timeme 8s".
 
 - The elapsed time is displayed in the following format: h m s ns
 
-### Example Runs
-$ timeme start
-Starting stopwatch!
-$ timeme stop
-Stopwatch stopped! Elapsed time: 0h 0m 3s
-
-
-$ timeme 2s
-Starting countdown for 2s... (CTRL+C to cancel)
-Time's up!
-
-
-$ timeme 1h 5m 3s
-Starting countdown for 1h 5m 3s... (CTRL+C to cancel)
-^C
-
-
-$ timeme run "ls -a"
-.  ..  README.md  timeme
-Command run 1 times. Elapsed time: 0h 0m 0s 5419243ns
-
-
-$ timeme run -b5 "ls -a"
-.  ..  README.md  timeme
-.  ..  README.md  timeme
-.  ..  README.md  timeme
-.  ..  README.md  timeme
-.  ..  README.md  timeme
-Command run 5 times. Elapsed time: 0h 0m 0s 28886660ns
-Average runtime: 0h 0m 0s 5777332ns
-
-
-$ timeme run --benchmark=3 "sleep 2"
-Command run 3 times. Elapsed time: 0h 0m 6s 17226265ns
-Average runtime: 0h 0m 2s 5742088ns
-
+### Example Runs  
+$ timeme start  
+Starting stopwatch!  
+$ timeme stop  
+Stopwatch stopped! Elapsed time: 0h 0m 3s  
+  
+  
+$ timeme 2s  
+Starting countdown for 2s... (CTRL+C to cancel)  
+Time's up!  
+  
+  
+$ timeme 1h 5m 3s  
+Starting countdown for 1h 5m 3s... (CTRL+C to cancel)  
+^C  
+  
+  
+$ timeme run "ls -a"  
+.  ..  README.md  timeme  
+Command run 1 times. Elapsed time: 0h 0m 0s 5419243ns  
+  
+  
+$ timeme run -b5 "ls -a"  
+.  ..  README.md  timeme  
+.  ..  README.md  timeme  
+.  ..  README.md  timeme  
+.  ..  README.md  timeme  
+.  ..  README.md  timeme  
+Command run 5 times. Elapsed time: 0h 0m 0s 28886660ns  
+Average runtime: 0h 0m 0s 5777332ns  
+  
+  
+$ timeme run --benchmark=3 "sleep 2"  
+Command run 3 times. Elapsed time: 0h 0m 6s 17226265ns  
+Average runtime: 0h 0m 2s 5742088ns  
+  
 ### Future Improvements
 - Redirect multiple run outputs so the terminal isn't cluttered (perhaps a log file for outputs).
 - Investigate if there are any ways to reduce the small amount of overhead time for best accuracy.
