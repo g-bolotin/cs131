@@ -1,6 +1,6 @@
-##timeme - a simple timer tool
+## timeme - a simple timer tool
 
-###What Does It Do?
+### What Does It Do?
 
 This timer tool has 3 functionalities:
 
@@ -8,21 +8,21 @@ This timer tool has 3 functionalities:
 2. **Countdown** - start a countdown for a specified amount of time.
 3. **Command Timer** - time how long a command takes, or get the average over multiple runs.
 
-###Why Is It Useful?
+### Why Is It Useful?
 
 - Lightweight and simple - no unnecessary features & low overhead.
 - Great for time management! :)
 - Useful for checking command/script performance with human-readable results.
 (to a certain degree of error; it's not perfect(yet))
 
-###How Can I Use It?
+### How Can I Use It?
 
-#####1. Stopwatch
+##### 1. Stopwatch
 - Start the stopwatch: **timeme start**
 - Stop the stopwatch: **timeme stop**
 - You can only have one timer going (start will override a previous start time).
 
-#####2. Countdown
+##### 2. Countdown
 - Acceptable formats include:
 	timeme Xh Xm Xs
 	timeme Xm Xs
@@ -37,7 +37,7 @@ For example: "timeme 5s 3s" will work the same as "timeme 8s".
 
 - The countdown can be cancelled by pressing **CTRL+C**
 
-#####3. Command Timer
+##### 3. Command Timer
 - Acceptable formats:
 	timeme run "command"
 	timeme run -bX "command"
