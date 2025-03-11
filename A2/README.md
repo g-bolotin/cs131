@@ -13,7 +13,7 @@ This timer tool has 3 functionalities:
 - Lightweight and simple - no unnecessary features & low overhead.
 - Great for time management! :)
 - Useful for checking command/script performance with human-readable results.
-(to a certain degree of error; it's not perfect(yet))
+(to a certain degree of error; it's not perfect (yet))
 
 ### How Can I Use It?
 
@@ -24,9 +24,9 @@ This timer tool has 3 functionalities:
 
 ##### 2. Countdown
 - Acceptable formats include:
-	timeme Xh Xm Xs
-	timeme Xm Xs
-	timeme Xs
+	- timeme Xh Xm Xs
+	- timeme Xm Xs
+	- timeme Xs
 
 - The order of h, m, and s doesn't matter. You could do something like: "timeme 5m 3h" and it will still work.
 
@@ -39,9 +39,9 @@ For example: "timeme 5s 3s" will work the same as "timeme 8s".
 
 ##### 3. Command Timer
 - Acceptable formats:
-	timeme run "command"
-	timeme run -bX "command"
-	timeme run --benchmark=X "command"
+	- timeme run "command"
+	- timeme run -bX "command"
+	- timeme run --benchmark=X "command"
 
 - If a benchmark number is specified, the command will run X amount of times and display the average runtime afterwards (except when X=1). 
 
