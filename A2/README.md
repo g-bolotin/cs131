@@ -17,6 +17,8 @@ This timer tool has 3 functionalities:
 
 ### How Can I Use It?
 
+Either specify the script's absolute or relative path when running, or add the script to a folder defined in $PATH, such as your bin folder. Ensure it has execution privileges.
+
 ##### 1. Stopwatch
 - Start the stopwatch: **timeme start**
 - Stop the stopwatch: **timeme stop**
