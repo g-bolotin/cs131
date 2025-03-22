@@ -1,0 +1,10 @@
+ 1284  mkdir ws56
+ 1285  cd ws56
+ 1287  sed -n '/^2\.0/p' ~/cs131/datasets/2019-01-h1.csv > vendor2.csv
+ 1288  head -5 vendor2.csv
+ 1289  wc vendor2.csv
+ 1291  vim ws56.txt
+ 1292  sed -n 's/[\:\"\-]//gp' ~/cs131/datasets/2019-01-h1.csv > no-separators.csv
+ 1294  head -10 no-separators.csv
+ 1295  vim ws56.txt 
+ 1296  history > cmds.log
