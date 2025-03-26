@@ -1,0 +1,30 @@
+Command: awk -f grader.awk grades.csv
+Output:
+
+Name: Alice
+Total Score: 253
+Average Score: 84.3333
+Pass
+
+Name: Bob
+Total Score: 246
+Average Score: 82
+Pass
+
+Name: Charlie
+Total Score: 270
+Average Score: 90
+Pass
+
+Name: David
+Total Score: 195
+Average Score: 65
+Fail
+
+Name: Eve
+Total Score: 265
+Average Score: 88.3333
+Pass
+
+Top Score: Charlie with 270
+Lowest Score: David with 195
