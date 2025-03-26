@@ -1,0 +1,5 @@
+  557  vim grades.csv 
+  558  vim grader.awk 
+  559  awk -f grader.awk grades.csv
+  596  vim a3.txt
+  602  history > cmds.log
